@@ -19,8 +19,8 @@ public class CreateAndWriteToExcelFile {
         };
 
         String filePath = "./data/gymSubs.xlsx";
-        String fileName = "Gym subscribers 0";
-        writeExcelFile(employeesData, fileName, filePath);
+        String sheetName = "Gym subscribers 0";
+        writeExcelFile(employeesData, sheetName, filePath);
     }
 
     private static void writeExcelFile(String[][] data, String sheetName, String filePath) {
