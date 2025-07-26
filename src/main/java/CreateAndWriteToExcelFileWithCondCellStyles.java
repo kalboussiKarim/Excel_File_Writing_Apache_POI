@@ -46,7 +46,15 @@ public class CreateAndWriteToExcelFileWithCondCellStyles {
 
                 for (int j = 0; j < data[i].length; j++) {
                     Cell cell = row.createCell(j);
-                    cell.setCellValue(data[i][j]);
+                    if (i != 0 && j == 2) { // Age column, not the header row
+                        try {
+                            cell.setCellValue(Integer.parseInt(data[i][j]));
+                        } catch (NumberFormatException e) {
+                            cell.setCellValue(data[i][j]); // fallback
+                        }
+                    } else {
+                        cell.setCellValue(data[i][j]);
+                    }
 
                     if (i == 0) {
                         cell.setCellStyle(headerStyle);
