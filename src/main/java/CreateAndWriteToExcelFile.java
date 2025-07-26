@@ -18,8 +18,8 @@ public class CreateAndWriteToExcelFile {
                 {"Anabel Lee", "anabel.lee@example.com", "29"}
         };
 
-        String filePath = "./data/gymSubs.xlsx";
-        String sheetName = "Gym subscribers 0";
+        String filePath = "./data/employees.xlsx";
+        String sheetName = "employees 0";
         writeExcelFile(employeesData, sheetName, filePath);
     }
 
